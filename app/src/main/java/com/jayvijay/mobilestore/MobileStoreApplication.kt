@@ -5,6 +5,7 @@ import com.google.android.material.color.DynamicColors
 import com.jayvijay.mobilestore.common.di.commonModule
 import com.jayvijay.mobilestore.data.di.networkModule
 import com.jayvijay.mobilestore.data.di.repositoryModule
+import com.jayvijay.mobilestore.domain.di.useCaseModule
 import org.koin.android.BuildConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -38,7 +39,8 @@ class MobileStoreApplication: Application() {
             modules(listOf(
                 commonModule,
                 networkModule,
-                repositoryModule
+                repositoryModule,
+                useCaseModule
             ))
         }
     }
