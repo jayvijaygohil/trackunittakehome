@@ -2,6 +2,7 @@ package com.jayvijay.mobilestore.domain.entity
 
 import android.os.Parcelable
 import com.jayvijay.mobilestore.data.dto.OrderDto
+import com.jayvijay.mobilestore.data.dto.OrderListDto
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -19,4 +20,4 @@ fun OrderDto.toOrderEntity() = OrderEntity(
     items.map { it.toItemEntity() }
 )
 
-fun List<OrderDto>.toOrderEntityList() = this.map { it.toOrderEntity() }
+fun OrderListDto.toOrderEntityList() = orders.map { it.toOrderEntity() }

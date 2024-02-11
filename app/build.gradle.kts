@@ -81,6 +81,10 @@ dependencies {
     implementation(libs.orbit.viewmodel)
 
     implementation(libs.epoxy)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
     kapt(libs.epoxy.processor)
 
     testImplementation(libs.junit)

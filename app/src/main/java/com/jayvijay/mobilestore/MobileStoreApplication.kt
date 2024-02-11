@@ -6,6 +6,7 @@ import com.jayvijay.mobilestore.common.di.commonModule
 import com.jayvijay.mobilestore.data.di.networkModule
 import com.jayvijay.mobilestore.data.di.repositoryModule
 import com.jayvijay.mobilestore.domain.di.useCaseModule
+import com.jayvijay.mobilestore.ui.di.viewModelModule
 import org.koin.android.BuildConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -40,7 +41,8 @@ class MobileStoreApplication: Application() {
                 commonModule,
                 networkModule,
                 repositoryModule,
-                useCaseModule
+                useCaseModule,
+                viewModelModule
             ))
         }
     }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mobile Store</string>
+    <string name="empty_error">No Orders</string>
+    <string name="empty_error_action">Try Again</string>
 </resources>
