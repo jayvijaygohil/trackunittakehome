@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.jayvijay.mobilestore.R
 import com.jayvijay.mobilestore.databinding.FragmentOrdersBinding
@@ -58,6 +59,9 @@ class OrdersFragment : Fragment() {
                         orderViewHolder {
                             id(order.hashCode())
                             orderId(order.orderId)
+                            onOrderClickListener { _, _, _, _ ->
+                                navigateToOrderDetailFragment(order)
+                            }
                         }
                     }
 
@@ -79,6 +83,11 @@ class OrdersFragment : Fragment() {
                 viewModel.loadOrders()
                 snackbar.dismiss()
             }.show()
+    }
+
+    private fun navigateToOrderDetailFragment(order: Order) {
+        val action = OrdersFragmentDirections.actionOrdersFragmentToOrderDetailFragment(order)
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

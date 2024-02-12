@@ -17,7 +17,7 @@ data class Order(
 data class Item(
     val id: Int,
     val name: String,
-    val price: Int
+    val price: String
 ) : Parcelable
 
 @Parcelize
@@ -52,7 +52,7 @@ fun OrderEntity.toOrder(): Order =
             Item(
                 itemEntity.id,
                 itemEntity.name,
-                itemEntity.price
+                itemEntity.price.toString()
             )
         }
     )
