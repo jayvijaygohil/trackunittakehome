@@ -14,6 +14,7 @@ abstract class OrderItemViewHolder : EpoxyModelWithHolder<OrderHolder>() {
 
     @EpoxyAttribute
     lateinit var itemName: String
+
     @EpoxyAttribute
     lateinit var itemPrice: String
 

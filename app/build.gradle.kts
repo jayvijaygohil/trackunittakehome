@@ -93,7 +93,7 @@ dependencies {
     testImplementation(libs.koin.test.junit4)
 
     testImplementation(libs.kotlinx.coroutines.test)
-    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.mockk)
     testImplementation(libs.orbit.test)
     testImplementation(libs.androidx.core.testing)
     

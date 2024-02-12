@@ -1,8 +1,8 @@
 package com.jayvijay.mobilestore.data.repository
 
+import com.jayvijay.mobilestore.data.dto.toOrderEntityList
 import com.jayvijay.mobilestore.data.network.service.MobileStoreService
 import com.jayvijay.mobilestore.domain.entity.OrderEntity
-import com.jayvijay.mobilestore.domain.entity.toOrderEntityList
 import com.jayvijay.mobilestore.domain.repository.OrderRepository
 
 class OrderRepositoryImpl(
