@@ -14,7 +14,7 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import timber.log.Timber
 
-class MobileStoreApplication: Application() {
+class MobileStoreApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
@@ -37,13 +37,15 @@ class MobileStoreApplication: Application() {
                 }
             )
             androidContext(this@MobileStoreApplication)
-            modules(listOf(
-                commonModule,
-                networkModule,
-                repositoryModule,
-                useCaseModule,
-                viewModelModule
-            ))
+            modules(
+                listOf(
+                    commonModule,
+                    networkModule,
+                    repositoryModule,
+                    useCaseModule,
+                    viewModelModule
+                )
+            )
         }
     }
 

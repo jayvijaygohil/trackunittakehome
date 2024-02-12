@@ -7,7 +7,7 @@ import com.jayvijay.mobilestore.domain.repository.OrderRepository
 
 class OrderRepositoryImpl(
     private val mobileStoreService: MobileStoreService
-): OrderRepository {
+) : OrderRepository {
     override suspend fun fetchOrders(): Result<List<OrderEntity>> {
         return mobileStoreService.getOrders()
             .map { orderDtoList ->

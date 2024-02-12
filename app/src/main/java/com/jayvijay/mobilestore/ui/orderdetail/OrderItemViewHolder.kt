@@ -8,12 +8,14 @@ import com.jayvijay.mobilestore.R
 import com.jayvijay.mobilestore.ui.base.KotlinEpoxyHolder
 
 @EpoxyModelClass
-abstract class OrderItemViewHolder: EpoxyModelWithHolder<OrderHolder>() {
+abstract class OrderItemViewHolder : EpoxyModelWithHolder<OrderHolder>() {
     override fun getDefaultLayout(): Int = R.layout.item_order_item
     override fun shouldSaveViewState(): Boolean = true
 
-    @EpoxyAttribute lateinit var itemName: String
-    @EpoxyAttribute lateinit var itemPrice: String
+    @EpoxyAttribute
+    lateinit var itemName: String
+    @EpoxyAttribute
+    lateinit var itemPrice: String
 
     override fun bind(holder: OrderHolder) {
         super.bind(holder)

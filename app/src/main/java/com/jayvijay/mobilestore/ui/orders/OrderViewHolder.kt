@@ -3,7 +3,6 @@ package com.jayvijay.mobilestore.ui.orders
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
-import com.airbnb.epoxy.AfterPropsSet
 import com.airbnb.epoxy.CallbackProp
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
@@ -12,11 +11,13 @@ import com.jayvijay.mobilestore.R
 import com.jayvijay.mobilestore.ui.base.KotlinEpoxyHolder
 
 @EpoxyModelClass
-abstract class OrderViewHolder: EpoxyModelWithHolder<OrderHolder>() {
+abstract class OrderViewHolder : EpoxyModelWithHolder<OrderHolder>() {
     override fun getDefaultLayout(): Int = R.layout.item_order
     override fun shouldSaveViewState(): Boolean = true
 
-    @EpoxyAttribute lateinit var orderId: String
+    @EpoxyAttribute
+    lateinit var orderId: String
+
     @EpoxyAttribute(EpoxyAttribute.Option.DoNotHash)
     var onOrderClickListener: View.OnClickListener? = null
         @CallbackProp set

@@ -9,7 +9,7 @@ data class ItemEntity(
     val id: Int,
     val name: String,
     val price: Int
-): Parcelable
+) : Parcelable
 
 fun ItemDto.toItemEntity() = ItemEntity(
     id,

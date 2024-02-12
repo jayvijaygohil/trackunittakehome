@@ -1,7 +1,6 @@
 package com.jayvijay.mobilestore.ui.orders
 
 import android.os.Parcelable
-import com.jayvijay.mobilestore.domain.entity.ItemEntity
 import com.jayvijay.mobilestore.domain.entity.OrderEntity
 import kotlinx.parcelize.Parcelize
 

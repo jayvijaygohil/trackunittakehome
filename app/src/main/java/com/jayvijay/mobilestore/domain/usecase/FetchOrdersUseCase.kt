@@ -9,7 +9,7 @@ fun interface FetchOrdersUseCase {
 
 class FetchOrdersUseCaseImpl(
     private val repository: OrderRepository
-): FetchOrdersUseCase {
+) : FetchOrdersUseCase {
     override suspend fun invoke(): Result<List<OrderEntity>> {
         return repository.fetchOrders()
     }

@@ -11,7 +11,7 @@ data class OrderEntity(
     val customerId: Int,
     val totalPrice: Int,
     val items: List<ItemEntity>
-): Parcelable
+) : Parcelable
 
 fun OrderDto.toOrderEntity() = OrderEntity(
     orderId,
